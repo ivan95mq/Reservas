@@ -4,7 +4,8 @@
   "description": "Motor de reservas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/ivan95mq/Reservas/issues"
   },
-  "homepage": "https://github.com/ivan95mq/Reservas#readme"
+  "homepage": "https://github.com/ivan95mq/Reservas#readme",
+  "dependencies": {
+    "csv-parse": "^5.3.0",
+    "express": "^4.18.1"
+  }
 }
