@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ivan95mq/Reservas#readme",
   "dependencies": {
     "csv-parse": "^5.3.0",
+    "csv-parser": "^3.0.0",
     "express": "^4.18.1"
   }
 }
