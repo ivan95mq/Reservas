@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     <title>rooms</title>
 </head>
 
@@ -14,15 +14,15 @@
     <div class="rooms-main">
         <header></header>
         <section class="rooms-main__photo"></section>
-        <div class="upload-container">
-            <input type="file" id="file_upload" style="height: 200px;width: 500px; " />
-        </div>
-        <button class="upload-btn" onclick="uploadFiles()">Submit</button>
+        <form action='http://localhost:3000/upload' method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Subir">
+        </form>
         <div class="rooms-options__container">
             <p class="rooms-options__title">Reserve title</p>
             <ul class="rooms-options__list-container">
                 <li class="rooms-options__option">
-                    <img src="assets/imgs/home-icon.png"
+                    <img src="/assets/imgs/home-icon.png"
                         class="rooms-options__option-icon option-head-icon head-icon" />
                     <div class="rooms-options__option-body">
                         <span class="rooms-options__option-line line-1">hola 1</span>
