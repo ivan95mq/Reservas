@@ -2,6 +2,29 @@ import React from 'react';
 import './App.css';
 
 const numbers = [1, 2, 3, 4, 5];
+const url = "https://localhost:3003/users"
+const [error, setError] = useState(null);
+const [isLoaded, setIsLoaded] = useState(false);
+const [items, setItems] = useState([]);
+
+
+useEffect(() => {
+  fetch(url)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        setIsLoaded(true);
+        setItems(result);
+      },
+      // Nota: es importante manejar errores aquí y no en 
+      // un bloque catch() para que no interceptemos errores
+      // de errores reales en los componentes.
+      (error) => {
+        setIsLoaded(true);
+        setError(error);
+      }
+    )
+}, [])
 
 function App() {
   return (
